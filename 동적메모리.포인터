@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+
+
+
+	char* pi = NULL;
+
+	int i = 0;
+	pi = (char *)malloc(100 * sizeof(char));
+	if (pi == NULL)
+	{
+		printf("실패\n");
+		exit(1);
+
+	}
+
+	for (i = 0; i < 26; i++) {
+		*(pi + i) = 'a' + i;
+	}
+
+	*(pi + i) = 0;
+	printf("%s\n", pi);
+	free(pi);
+
+	return 0;
+
+}
